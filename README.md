@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### stackoverflow clone using appwrite and nextjs
 
-## Getting Started
+![Screenshot 2024-09-14 124312](https://github.com/user-attachments/assets/22677b83-d364-4f54-ae2b-d28a06c8218a)
 
-First, run the development server:
+![Screenshot 2024-09-14 123054](https://github.com/user-attachments/assets/69e52534-6b5f-4319-a3c9-88ce7e365f6d)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Setting locally
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone this repo using
+   ```
+   git clone https://github.com/mayank0274/stackoverflow-clone.git
+   
+   ```
+2. Go to root of project folder and create a .env file with following fields ( obtain from appwrite )
+  ```
+NEXT_PUBLIC_APPWRITE_HOST_URL =
+NEXT_PUBLIC_APPWRITE_PROJECT_ID =
+APPWRITE_API_KEY =
+NEXT_PUBLIC_GUEST_EMAIL = (create account for geust user then enter email here same for password )
+NEXT_PUBLIC_GUEST_PASSWORD = 
+  ```
 
-## Learn More
+3. Run ``` npm install ``` for installing dependencies
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. Run ``` npm run dev ``` to run app
