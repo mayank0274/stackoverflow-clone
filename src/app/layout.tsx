@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import { Box, ColorModeScript } from "@chakra-ui/react";
+import { ChakraUiProvider } from "./ChakraProvider";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +17,39 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning={true} data-color-mode="dark">
+      <body className={inter.className} suppressHydrationWarning={true}>
+        <ColorModeScript initialColorMode="dark" />
+        <ChakraUiProvider>
+          <Box
+            minH={"100vh"}
+            width={"100%"}
+            display={"flex"}
+            flexDir={"column"}
+            gap={10}
+            alignItems={"center"}
+            padding={2}
+          >
+            <Navbar />
+            {children}
+          </Box>
+          <footer
+            style={{
+              background: "#0d1117",
+              color: "#fff",
+              padding: "10px",
+              textAlign: "center",
+              width: "100%",
+              marginTop: "50px",
+              opacity: 0.8,
+              position: "relative",
+              bottom: 0,
+            }}
+          >
+            &copy; copyright 2024
+          </footer>
+        </ChakraUiProvider>
+      </body>
     </html>
   );
 }
